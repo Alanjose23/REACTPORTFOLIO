@@ -3,3 +3,28 @@ header{
     border-radius: 2px;
     color: white;
 }
+section {
+    border-radius: 5px;
+    
+}
+nav {
+    background-color: #66A182;
+   
+
+}
+img {
+    border-radius: 5px;
+}
+.projpic{
+    width: 500px;
+    border-radius: 5px;
+}
+.cardprojects{
+background-color:#2E4057;
+color:aliceblue;
+}
+.main{
+background-color: #2E4057;
+color: white;
+}
+html {background-color: #1D201F}
