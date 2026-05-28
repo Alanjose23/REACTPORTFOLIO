@@ -672,6 +672,217 @@ button { font-family: inherit; }
 }
 
 /* ============================================================
+   ABOUT — META & SKILL GROUPS
+   ============================================================ */
+.about__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  color: var(--clr-text-muted);
+}
+
+.skill-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.skill-group__label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--clr-primary);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.skill-group__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+/* ============================================================
+   EXPERIENCE TIMELINE
+   ============================================================ */
+.timeline-section {
+  border-top: 1px solid var(--clr-border);
+  padding-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline__item {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 0 1.25rem;
+}
+
+.timeline__marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.1rem;
+}
+
+.timeline__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-accent));
+  flex-shrink: 0;
+  box-shadow: 0 0 10px var(--clr-primary-glow);
+}
+
+.timeline__line {
+  width: 2px;
+  flex: 1;
+  min-height: 24px;
+  background: linear-gradient(to bottom, var(--clr-primary-dim), transparent);
+  margin-top: 4px;
+}
+
+.timeline__body {
+  padding-bottom: 1.5rem;
+}
+
+.timeline__header {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  border-radius: var(--r-sm);
+  text-align: left;
+  transition: background 0.2s;
+  color: var(--clr-text);
+}
+
+.timeline__header:hover,
+.timeline__header.open {
+  background: var(--clr-surface);
+}
+
+.timeline__title-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.timeline__role {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--clr-text);
+}
+
+.timeline__company {
+  font-size: 0.85rem;
+  color: var(--clr-text-muted);
+}
+
+.timeline__period {
+  font-size: 0.8rem;
+  color: var(--clr-text-dim);
+  font-family: var(--font-mono);
+  white-space: nowrap;
+  padding-top: 0.15rem;
+}
+
+.timeline__chevron {
+  color: var(--clr-text-muted);
+  font-size: 0.85rem;
+  padding-top: 0.1rem;
+  display: inline-block;
+}
+
+.timeline__bullets {
+  list-style: none;
+  padding: 0.5rem 1rem 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.timeline__bullets li {
+  font-size: 0.9rem;
+  color: var(--clr-text-muted);
+  line-height: 1.65;
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.timeline__bullets li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--clr-primary);
+  font-size: 0.7rem;
+  top: 0.22rem;
+}
+
+/* ============================================================
+   EDUCATION
+   ============================================================ */
+.education-section {
+  border-top: 1px solid var(--clr-border);
+  padding-top: 3.5rem;
+}
+
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.edu-card {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--r-md);
+  padding: 1.5rem;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  cursor: default;
+}
+
+.edu-card:hover {
+  border-color: var(--clr-border-hover);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.35);
+}
+
+.edu-card__period {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--clr-primary);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.65rem;
+}
+
+.edu-card__degree {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--clr-text);
+  margin-bottom: 0.35rem;
+  line-height: 1.35;
+}
+
+.edu-card__school {
+  font-size: 0.82rem;
+  color: var(--clr-text-muted);
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 900px) {
@@ -692,4 +903,9 @@ button { font-family: inherit; }
 
   .projects-page,
   .about-page { padding: 2.5rem 1.25rem; }
+
+  .timeline__header { flex-wrap: wrap; }
+  .timeline__period { order: 3; }
+
+  .edu-grid { grid-template-columns: 1fr; }
 }

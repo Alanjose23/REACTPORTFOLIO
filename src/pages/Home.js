@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 
 const roles = [
   'Full-Stack Developer',
-  'React Developer',
-  'Problem Solver',
-  'Creative Coder',
+  'HMI / UI-UX Engineer',
+  'React & Node.js Dev',
+  '3D Graphics Explorer',
 ];
 
 const containerVariants = {
@@ -80,8 +80,9 @@ export default function Home() {
           </motion.div>
 
           <motion.p className="hero__bio" variants={itemVariants}>
-            I build modern, responsive web applications. Passionate about turning ideas
-            into reality through clean code and thoughtful design.
+            Georgia Tech Bootcamp graduate building production-ready React apps, REST APIs,
+            and data-driven interfaces — with a growing focus on HMI, 3D graphics, and
+            robotics UI. Based in Grayson, GA · Open to relocation.
           </motion.p>
 
           <motion.div className="hero__actions" variants={itemVariants}>
